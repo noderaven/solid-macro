@@ -3,3 +3,4 @@ __pycache__/
 .pytest_cache/
 macro/Payload.bas
 macro/build/dist/
+docs/superpowers/

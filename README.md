@@ -72,7 +72,7 @@ delivery/
 tests/                 pytest covering all Python tooling (43 tests)
 docs/
   README files plus techniques / threat-model / delivery / development /
-  history and the superpowers/ design spec + implementation plan.
+  history.
 
 .github/workflows/ci.yml   pytest + assemble --check on push/PR
 ```
@@ -180,8 +180,6 @@ ISO delivery wrapper; `pytest` is dev-only.
 | [docs/delivery.md](docs/delivery.md) | MotW story, ISO/LNK reasoning |
 | [docs/development.md](docs/development.md) | build, test, lab workflow |
 | [docs/history.md](docs/history.md) | v1 review findings, v2 narrative |
-| [docs/superpowers/specs/2026-06-24-solid-macro-modernization-design.md](docs/superpowers/specs/2026-06-24-solid-macro-modernization-design.md) | v2 design spec |
-| [docs/superpowers/plans/2026-06-24-solid-macro-v2.md](docs/superpowers/plans/2026-06-24-solid-macro-v2.md) | v2 implementation plan |
 
 ## Authorization and use
 

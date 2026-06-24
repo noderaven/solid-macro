@@ -38,6 +38,3 @@ The detection profile is documented honestly in
 in 2026, and that is expected. The artifact's value is demonstrating
 mastery of modern technique selection, not undetectability against a
 defended target.
-
-Design rationale: see `docs/superpowers/specs/2026-06-24-solid-macro-modernization-design.md`.
-Implementation plan: see `docs/superpowers/plans/2026-06-24-solid-macro-v2.md`.
