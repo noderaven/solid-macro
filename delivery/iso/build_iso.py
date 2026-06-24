@@ -45,7 +45,10 @@ def main(argv: list[str] | None = None) -> int:
 
     for local in args.files:
         parts = list(local.parts)
-        if len(parts) == 1:
+        # Preserve a single-level subdirectory only if the input path is relative
+        # and has exactly one parent. Absolute paths drop subdirectory structure
+        # so they always land at the ISO root.
+        if local.is_absolute() or len(parts) <= 1:
             iso_dir = ""
             joliet_dir = ""
         else:
