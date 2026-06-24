@@ -58,8 +58,8 @@ def strip_comments(text: str) -> str:
 
 def check_sub_balance(name: str, text: str) -> list[str]:
     code = strip_comments(text)
-    opens = len(re.findall(r"^\s*(Sub|Function)\s+\w+", code, re.MULTILINE | re.IGNORECASE))
-    closes = len(re.findall(r"^\s*End\s+(Sub|Function)\b", code, re.MULTILINE | re.IGNORECASE))
+    opens = len(re.findall(r"\b(?:Sub|Function)\s+\w+\s*\(", code, re.IGNORECASE))
+    closes = len(re.findall(r"\bEnd\s+(?:Sub|Function)\b", code, re.IGNORECASE))
     if opens != closes:
         return [f"{name}: Sub/Function open count {opens} != End count {closes}"]
     return []
