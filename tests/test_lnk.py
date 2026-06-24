@@ -60,8 +60,8 @@ def test_flags_include_relative_path_and_unicode(tmp_path):
 def test_strings_match_inputs(tmp_path):
     out = tmp_path / "t.lnk"
     build_lnk.main([
-        "--target", "data\\\\report.docm",
-        "--args", "--arg",
+        "--target", "data\\report.docm",
+        "--args=--my-flag",
         "--working-dir", "data",
         "--icon-from", "shell32.dll,3",
         "--out", str(out),
@@ -69,7 +69,7 @@ def test_strings_match_inputs(tmp_path):
     p = parse_lnk(out.read_bytes())
     assert p["relative_path"] == "data\\report.docm"
     assert p["working_dir"] == "data"
-    assert p["arguments"] == "--arg"
+    assert p["arguments"] == "--my-flag"
     assert p["icon_location"] == "shell32.dll"
 
 
